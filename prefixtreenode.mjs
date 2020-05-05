@@ -13,6 +13,7 @@ export default class PrefixTreeNode {
     this.terminal = false
   }
 
+
   /**
    * isTerminal() takes no arguments
    * The return value is `true` or `false` depending
@@ -22,6 +23,7 @@ export default class PrefixTreeNode {
     return this.terminal
   }
 
+
   /**
    * childrenCount() takes no arguments
    * The return value is the total count of
@@ -30,6 +32,7 @@ export default class PrefixTreeNode {
   childrenCount() {
     return Object.keys(this.children).length
   }
+
 
   /**
    * hasChild() returns a boolean value stating if the current
@@ -43,6 +46,7 @@ export default class PrefixTreeNode {
     }
     return false
   }
+
 
   /**
    * getChild() returns a node object if the current node has
@@ -59,6 +63,7 @@ export default class PrefixTreeNode {
     // FIXME: "return Error()" may not be the best solution here
     return Error(`No child exists for character ${character}`)
   }
+
 
   /**
    * addChild() adds a given character and node as a child of
