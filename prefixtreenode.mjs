@@ -1,9 +1,8 @@
+/**
+ * PrefixTreeNode Class is used in the PrefixTree to
+ * store each character and a dictionary of its child nodes.
+*/
 export default class PrefixTreeNode {
-  /**
-   * PrefixTreeNode is used in the PrefixTree to store each character
-   * and a dictionary of its child nodes.
-  */
-
   constructor(character = undefined) {
     // Character that this node represents
     this.charater = character

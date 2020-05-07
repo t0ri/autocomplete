@@ -1,6 +1,11 @@
 import PrefixTreeNode from './prefixtreenode.mjs'
 
-// TODO: Write a description for PrefixTree Class
+/**
+ * PrefixTree Class creates a trie from an optional input
+ * list of strings. It contains multiple methods including
+ * inserting a new string, string lookup, and collecting all
+ * strings starting with an optional prefix.
+*/
 export default class PrefixTree {
   constructor(strings = undefined) {
     // Root node of tree holding empty string
