@@ -1,0 +1,22 @@
+{
+  "name": "@tori/autocomplete",
+  "version": "1.0.0",
+  "description": "Loosely-coupled autocompletion library",
+  "main": "autocomplete.mjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t0ri/autocomplete.git"
+  },
+  "author": "@t0ri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t0ri/autocomplete/issues"
+  },
+  "homepage": "https://github.com/t0ri/autocomplete#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}

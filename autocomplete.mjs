@@ -14,7 +14,7 @@ export default class Autocompletion {
     // Option to control how many strings are returned
     // when autocomplete() is called
     // Defaults to unlimited string count
-    this.autocompleteCount = undefined
+    this.autocompleteCount = count
 
     // Option to control if trie ignores casing of
     // characters when autocomplete() is called
