@@ -1,9 +1,9 @@
 import PrefixTree from './prefixtree.mjs'
 
 export default class Autocompletion {
-  constructor(input = undefined, count = undefined) {
+  constructor(entries = undefined, count = undefined, ignoreCasing = true) {
     // Access trie directly through `this.trie`
-    this.trie = new PrefixTree(input)
+    this.trie = new PrefixTree()
 
     // Total count of strings inserted in trie
     this.entries = this.trie.stringCount
@@ -13,7 +13,16 @@ export default class Autocompletion {
 
     // Option to control how many strings are returned
     // when autocomplete() is called
-    this.autocompleteCount = count
+    // Defaults to unlimited string count
+    this.autocompleteCount = undefined
+
+    // Option to control if trie ignores casing of
+    // characters when autocomplete() is called
+    // Defaults to false if no option is passed
+    this.ignoreCasing = ignoreCasing
+
+    // Insert entries to `this.trie`
+    if (entries) { this.addEntries(entries) }
   }
 
 
@@ -28,10 +37,10 @@ export default class Autocompletion {
    * @param {string} [prefix] - optional value to
    * return autocompletion based on
   */
-  autocomplete(prefix) {
-    // Set prefix to '' if no prefix passed in
-    if (prefix === undefined) {
-      prefix = ''
+  autocomplete(prefix = '') {
+    // If `this.ignoreCasing` is true, update prefix to lowercase
+    if (this.ignoreCasing) {
+      prefix = prefix.toLowerCase()
     }
 
     // If no autocompleteCount is defined, return all
@@ -49,8 +58,14 @@ export default class Autocompletion {
    * insert into trie for autocompletion
   */
   addEntry(entry) {
+    // If `this.ignoreCasing` is true, convert entry
+    // to lowercase before insertion into trie
     if (entry) {
-      this.trie.insert(entry)
+      if (this.ignoreCasing) {
+        this.trie.insert(entry.toLowerCase())
+      } else {
+        this.trie.insert(entry)
+      }
     }
   }
 
@@ -62,8 +77,20 @@ export default class Autocompletion {
    * insert into trie for autocompletion
   */
   addEntries(entries) {
-    entries.forEach((entry) => {
-      this.addEntry(entry)
-    })
+    // If `this.ignoreCasing` is true, convert all entries
+    // to lowercase before insertion into trie
+    if (entries) {
+      if (this.ignoreCasing) {
+        entries.forEach((entry) => {
+          if (typeof entry === 'string') {
+            this.addEntry(entry.toLowerCase())
+          }
+        })
+      } else {
+        entries.forEach((entry) => {
+          this.addEntry(entry)
+        })
+      }
+    }
   }
 }
