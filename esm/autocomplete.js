@@ -1,28 +1,28 @@
-import PrefixTree from './prefixtree.mjs'
+const PrefixTree = require('./prefixtree.js');
 
-export default class Autocompletion {
+class Autocompletion {
   constructor(entries = undefined, count = undefined, ignoreCasing = true) {
     // Access trie directly through `this.trie`
-    this.trie = new PrefixTree()
+    this.trie = new PrefixTree();
 
     // Total count of strings inserted in trie
-    this.entries = this.trie.stringCount
+    this.entries = this.trie.stringCount;
 
     // Total count of all characters in trie
-    this.entriesCharCount = this.trie.nodeCount
+    this.entriesCharCount = this.trie.nodeCount;
 
     // Option to control how many strings are returned
     // when autocomplete() is called
     // Defaults to unlimited string count
-    this.autocompleteCount = count
+    this.autocompleteCount = count;
 
     // Option to control if trie ignores casing of
     // characters when autocomplete() is called
     // Defaults to false if no option is passed
-    this.ignoreCasing = ignoreCasing
+    this.ignoreCasing = ignoreCasing;
 
     // Insert entries to `this.trie`
-    if (entries) { this.addEntries(entries) }
+    if (entries) { this.addEntries(entries); }
   }
 
 
@@ -40,7 +40,7 @@ export default class Autocompletion {
   autocomplete(prefix = '') {
     // If `this.ignoreCasing` is true, update prefix to lowercase
     if (this.ignoreCasing) {
-      prefix = prefix.toLowerCase()
+      prefix = prefix.toLowerCase();
     }
 
     // If no autocompleteCount is defined, return all
@@ -62,9 +62,9 @@ export default class Autocompletion {
     // to lowercase before insertion into trie
     if (entry) {
       if (this.ignoreCasing) {
-        this.trie.insert(entry.toLowerCase())
+        this.trie.insert(entry.toLowerCase());
       } else {
-        this.trie.insert(entry)
+        this.trie.insert(entry);
       }
     }
   }
@@ -83,14 +83,16 @@ export default class Autocompletion {
       if (this.ignoreCasing) {
         entries.forEach((entry) => {
           if (typeof entry === 'string') {
-            this.addEntry(entry.toLowerCase())
+            this.addEntry(entry.toLowerCase());
           }
-        })
+        });
       } else {
         entries.forEach((entry) => {
-          this.addEntry(entry)
-        })
+          this.addEntry(entry);
+        });
       }
     }
   }
 }
+
+export default Autocompletion;

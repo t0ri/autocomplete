@@ -1,4 +1,5 @@
-require('../autocomplete.mjs')
+// import * as Autocompletion from '../esm/autocomplete.js'
+const { Autocompletion } = require('../umd/autocomplete.js');
 
 describe('Prefix tree', () => {
   describe('initializes', () => {

@@ -1,4 +1,4 @@
-import PrefixTreeNode from './prefixtreenode.mjs'
+const PrefixTreeNode = require('./prefixtreenode.js')
 
 /**
  * PrefixTree Class creates a trie from an optional input
