@@ -14,5 +14,6 @@ module.exports = {
   },
   rules: {
     semi: 0,
+    'no-param-reassign': 0,
   },
 };
