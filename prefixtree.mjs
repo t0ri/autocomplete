@@ -113,14 +113,14 @@ export default class PrefixTree {
       // When the whole string is traversed
       // but the node is not terminal
       if (depth === input.length && !node.terminal) {
-        return (node, depth)
+        return [node, depth]
       }
 
       // Increment depth
       depth += 1
     })
 
-    return (node, depth)
+    return [node, depth]
   }
 
 
@@ -143,7 +143,7 @@ export default class PrefixTree {
     const node = this.findNode(prefix)[0]
     // Traverse tree and push strings to completions
     if (!this.isEmpty() && node) {
-      this.traverse(node, prefix, completions.push)
+      this.traverse(node, prefix, completions.push.bind(completions))
     }
     return completions
   }
@@ -151,10 +151,10 @@ export default class PrefixTree {
 
   /**
    * strings() returns a list of all strings in the tree
-  */
+   */
   strings() {
     const allStrings = []
-    this.traverse(this.root, '', allStrings.push)
+    this.traverse(this.root, '', allStrings.push.bind(allStrings))
     return allStrings
   }
 
@@ -181,7 +181,3 @@ export default class PrefixTree {
     })
   }
 }
-
-const input = ['how', 'now', 'brown', 'cow']
-const tree = new PrefixTree(input)
-tree.insert('cat')
