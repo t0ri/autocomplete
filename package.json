@@ -3,8 +3,8 @@
   "version": "1.1.0",
   "description": "Loosely-coupled autocompletion library",
   "type": "module",
-  "main": "umd/index.js",
-  "module": "esm/index.js",
+  "main": "umd/autocomplete.js",
+  "module": "esm/autocomplete.js",
   "files": [
     "esm/*",
     "emd/*"
