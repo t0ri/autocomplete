@@ -59,8 +59,7 @@ export default class PrefixTreeNode {
       return this.children[character]
     }
 
-    // FIXME: "return Error()" may not be the best solution here
-    return Error(`No child exists for character ${character}`)
+    throw new Error(`No child exists for character ${character}`)
   }
 
 
@@ -75,9 +74,8 @@ export default class PrefixTreeNode {
   addChild(character, childNode) {
     if (!this.hasChild(character)) {
       this.children[character] = childNode
+    } else {
+      throw new Error(`Child already exists for character ${character}`)
     }
-
-    // FIXME: "return Error()" may not be the best solution here
-    return Error(`Child already exists for character ${character}`)
   }
 }
