@@ -2,7 +2,9 @@
 ![Coveralls github](https://img.shields.io/coveralls/github/t0ri/autocomplete)
 ![GitHub last commit](https://img.shields.io/github/last-commit/t0ri/autocomplete)
 
+<div style="text-align:center">
 ![@t0ri/autocomplete hero](./img/header.png)
+</div>
 
 # Loosely Coupled Autocompletion Library
 This autocompletion library is loosely-coupled from the DOM and other dependencies, making it a lightweight lightning-fast solution to autocomplete.  It can be used in Node or in the browser.
