@@ -1,4 +1,4 @@
-import { PrefixTreeNode } from './prefixtreenode'
+import * as PrefixTreeNode from './prefixtreenode'
 
 /**
  * PrefixTree Class creates a trie from an optional input

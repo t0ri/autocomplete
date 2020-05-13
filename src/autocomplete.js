@@ -1,4 +1,4 @@
-import { PrefixTree } from './prefixtree'
+import * as PrefixTree from './prefixtree'
 
 class Autocompletion {
   constructor(entries = undefined, count = undefined, ignoreCasing = true) {
