@@ -36,7 +36,6 @@ describe('Prefix Tree', () => {
       expect(tree.complete('t')).toStrictEqual(['testing', 'tedious'])
     })
     test('- findNode', () => {
-      // expect(tree.findNode('ted')[0]).toBeInstanceOf(PrefixTreeNode)
       expect(tree.findNode('ted')[1]).toEqual(3)
     })
   })
