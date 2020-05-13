@@ -6,7 +6,7 @@
   <img src="./img/header.png" alt="@t0ri/autocomplete hero img">
 </div>
 
-# Loosely Coupled Autocompletion Library
+# Autocompletion Library
 This autocompletion library is loosely-coupled from the DOM and other dependencies, making it a lightweight lightning-fast solution to autocomplete.  It can be used in Node or in the browser.
 
 [View NPM Package here.](https://www.npmjs.com/package/@t0ri/autocomplete)
