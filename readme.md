@@ -3,7 +3,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/t0ri/autocomplete)
 
 <div style="text-align:center">
-![@t0ri/autocomplete hero](./img/header.png)
+  <img src="./img/header.png" alt="@t0ri/autocomplete hero img">
 </div>
 
 # Loosely Coupled Autocompletion Library
