@@ -2,6 +2,7 @@
   "name": "@t0ri/autocomplete",
   "version": "1.0.0",
   "description": "Loosely-coupled autocompletion library",
+  "type": "module",
   "main": "umd/index.js",
   "module": "esm/index.js",
   "files": [
