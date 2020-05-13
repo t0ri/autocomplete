@@ -3,7 +3,7 @@ import { terser } from 'rollup-plugin-terser';
 export default [
   {
     input: 'src/autocomplete.js',
-    plugins: [terser()],
+    // plugins: [terser()],
     output: {
       file: 'umd/autocomplete.js',
       format: 'umd',
@@ -21,7 +21,7 @@ export default [
   },
   {
     input: 'src/prefixtree.js',
-    plugins: [terser()],
+    // plugins: [terser()],
     output: {
       file: 'umd/prefixtree.js',
       format: 'umd',
@@ -39,7 +39,7 @@ export default [
   },
   {
     input: 'src/prefixtreenode.js',
-    plugins: [terser()],
+    // plugins: [terser()],
     output: {
       file: 'umd/prefixtreenode.js',
       format: 'umd',
