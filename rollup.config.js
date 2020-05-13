@@ -8,7 +8,7 @@ export default [
       file: 'umd/autocomplete.js',
       format: 'umd',
       name: 'autocomplete',
-      esModule: true,
+      esModule: false,
     },
   },
   {

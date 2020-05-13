@@ -7,7 +7,7 @@
   "module": "esm/autocomplete.js",
   "files": [
     "esm/*",
-    "emd/*"
+    "umd/*"
   ],
   "scripts": {
     "test": "jest",
