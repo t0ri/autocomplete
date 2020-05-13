@@ -36,6 +36,8 @@ describe('Prefix Tree', () => {
       expect(tree.complete('t')).toStrictEqual(['testing', 'tedious'])
     })
     test('- findNode', () => {
+      node = tree.findNode('ted')[0]
+      expect(tree.findNode('ted')[0]).toMatchObject(node)
       expect(tree.findNode('ted')[1]).toEqual(3)
     })
   })
