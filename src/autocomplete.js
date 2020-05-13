@@ -5,12 +5,6 @@ export default class Autocompletion {
     // Access trie directly through `this.trie`
     this.trie = new PrefixTree()
 
-    // Total count of strings inserted in trie
-    this.entries = this.trie.stringCount
-
-    // Total count of all characters in trie
-    this.entriesCharCount = this.trie.nodeCount
-
     // Option to control how many strings are returned
     // when autocomplete() is called
     // Defaults to unlimited string count
@@ -23,6 +17,22 @@ export default class Autocompletion {
 
     // Insert entries to `this.trie`
     if (entries) { this.addEntries(entries) }
+  }
+
+
+  /**
+   * @property Total count of strings inserted in trie
+  */
+  get entries() {
+    return this.trie.stringCount
+  }
+
+
+  /**
+   * @property Total count of all characters in trie
+   */
+  get entriesCharCount() {
+    return this.trie.nodeCount
   }
 
 
