@@ -36,3 +36,4 @@ import Autocomplete from './node_modules/@t0ri/autocomplete/esm/autocomplete.js'
 ## To Do
 - autocomplete() stops traversal once length of returned array hits `this.autocompleteCount`
 - preserve casing for return when `this.ignoreCasing` is true (rewrite method non-destructively)
+- expand documentation
