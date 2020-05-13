@@ -5,7 +5,7 @@
 export default class PrefixTreeNode {
   constructor(character = undefined) {
     // Character that this node represents
-    this.charater = character
+    this.character = character
     // Object that holds characters and references to child nodes
     this.children = {}
     // Boolean if node is final character in string
