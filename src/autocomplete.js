@@ -1,6 +1,6 @@
-import * as PrefixTree from './prefixtree'
+import PrefixTree from './prefixtree'
 
-export default class Autocompletion {
+class Autocompletion {
   constructor(entries = undefined, count = undefined, ignoreCasing = true) {
     // Access trie directly through `this.trie`
     this.trie = new PrefixTree()
@@ -104,3 +104,5 @@ export default class Autocompletion {
     }
   }
 }
+
+export default Autocompletion

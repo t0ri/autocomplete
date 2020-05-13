@@ -1,4 +1,4 @@
-import * as PrefixTreeNode from './prefixtreenode'
+import PrefixTreeNode from './prefixtreenode'
 
 /**
  * PrefixTree Class creates a trie from an optional input
@@ -182,4 +182,4 @@ class PrefixTree {
   }
 }
 
-module.exports.PrefixTree = PrefixTree
+export default PrefixTree

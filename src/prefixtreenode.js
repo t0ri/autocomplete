@@ -80,4 +80,4 @@ class PrefixTreeNode {
   }
 }
 
-module.exports.PrefixTreeNode = PrefixTreeNode
+export default PrefixTreeNode
