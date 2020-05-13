@@ -13,6 +13,7 @@ export default [
   },
   {
     input: 'src/autocomplete.js',
+    plugins: [terser()],
     output: {
       file: 'esm/autocomplete.js',
       format: 'esm',
@@ -30,6 +31,7 @@ export default [
   },
   {
     input: 'src/prefixtree.js',
+    plugins: [terser()],
     output: {
       file: 'esm/prefixtree.js',
       format: 'esm',
@@ -47,6 +49,7 @@ export default [
   },
   {
     input: 'src/prefixtreenode.js',
+    plugins: [terser()],
     output: {
       file: 'esm/prefixtreenode.js',
       format: 'esm',
