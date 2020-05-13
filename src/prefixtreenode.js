@@ -2,7 +2,7 @@
  * PrefixTreeNode Class is used in the PrefixTree to
  * store each character and a dictionary of its child nodes.
 */
-export default class PrefixTreeNode {
+class PrefixTreeNode {
   constructor(character = undefined) {
     // Character that this node represents
     this.character = character
@@ -79,3 +79,5 @@ export default class PrefixTreeNode {
     }
   }
 }
+
+module.exports.PrefixTreeNode = PrefixTreeNode

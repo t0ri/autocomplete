@@ -1,4 +1,4 @@
-const PrefixTreeNode = require('./prefixtreenode.js')
+import { PrefixTreeNode } from './prefixtreenode'
 
 /**
  * PrefixTree Class creates a trie from an optional input
@@ -6,7 +6,7 @@ const PrefixTreeNode = require('./prefixtreenode.js')
  * inserting a new string, string lookup, and collecting all
  * strings starting with an optional prefix.
 */
-export default class PrefixTree {
+class PrefixTree {
   constructor(strings = undefined) {
     // Root node of tree holding empty string
     this.root = new PrefixTreeNode('')
@@ -181,3 +181,5 @@ export default class PrefixTree {
     })
   }
 }
+
+module.exports.PrefixTree = PrefixTree
