@@ -1,6 +1,6 @@
 {
   "name": "@t0ri/autocomplete",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Loosely-coupled autocompletion library",
   "type": "module",
   "main": "umd/autocomplete.js",
