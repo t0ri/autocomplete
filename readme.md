@@ -13,12 +13,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Browser Installation
 Install the library into your project
-
-```npm install @t0ri/autocomplete --save```
+```
+npm install @t0ri/autocomplete --save
+```
 
 Import the library content into a JS file using ES6 import syntax at the top of your file
-
-```import Autocomplete from './node_modules/@t0ri/autocomplete/esm/autocomplete.js'```
+```
+import Autocomplete from './node_modules/@t0ri/autocomplete/esm/autocomplete.js'
+```
 
 ## Features
 - utilizes an internal trie to process data
