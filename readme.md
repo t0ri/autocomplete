@@ -12,7 +12,7 @@ This autocompletion library is loosely-coupled from the DOM and other dependenci
 [View NPM Package here.](https://www.npmjs.com/package/@t0ri/autocomplete)
 
 
-[View demo here.](https://t0ri.github.io/autocomplete-demo/)
+[View demo here.](https://t0ri-make-school-coursework.github.io/autocomplete-demo/)
 
 ## Features
 - utilizes an internal trie to process data
