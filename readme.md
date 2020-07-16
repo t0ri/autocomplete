@@ -11,6 +11,9 @@ This autocompletion library is loosely-coupled from the DOM and other dependenci
 
 [View NPM Package here.](https://www.npmjs.com/package/@t0ri/autocomplete)
 
+
+[View demo here.](https://t0ri-make-school-coursework.github.io/autocomplete-demo/)
+
 ## Features
 - utilizes an internal trie to process data
 - options to ignoreCasing and return only a certain amount of strings
@@ -33,3 +36,4 @@ import Autocomplete from './node_modules/@t0ri/autocomplete/esm/autocomplete.js'
 ## To Do
 - autocomplete() stops traversal once length of returned array hits `this.autocompleteCount`
 - preserve casing for return when `this.ignoreCasing` is true (rewrite method non-destructively)
+- expand documentation
